@@ -2,7 +2,7 @@
 
 A static, responsive page with a newsletter signup popup that appears after a delay, validates the email address and can be dismissed. Built for Task 20 (Newsletter Signup Modal) of my Web Development internship.
 
-**Live page:** https://cedrick40.github.io/newsletter-modal/
+**Live page:** https://cedrick40.github.io/newsletter-signup-model/
 
 ## About the project
 The page is a small landing page for a made-up newsletter called The Weekly Byte. After four seconds a popup appears with an email form. The user can subscribe, or close the popup with the X button, the "No thanks" link, the Escape key or a click on the dark overlay. Once the popup has been closed or the form has been submitted, it does not appear again on later visits. A small "Show the popup again" link at the top lets anyone see the popup again for testing.
