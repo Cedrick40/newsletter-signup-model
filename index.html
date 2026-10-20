@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Weekly Byte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <span class="brand">The Weekly Byte</span>
+    <button type="button" class="link-btn" id="reset-demo">Show the popup again</button>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Web development tips for beginners</h1>
+      <p>Short, practical lessons on HTML, CSS and JavaScript. Stay on the page for a few seconds and a signup popup will appear.</p>
+    </section>
+
+    <section class="articles" aria-label="Latest articles">
+      <article>
+        <h2>Flexbox in ten minutes</h2>
+        <p>Learn the five properties that solve most layout problems.</p>
+      </article>
+      <article>
+        <h2>Your first fetch request</h2>
+        <p>Load data from an API and show it on the page, step by step.</p>
+      </article>
+      <article>
+        <h2>Debugging with the console</h2>
+        <p>Read error messages calmly and find the real cause faster.</p>
+      </article>
+    </section>
+  </main>
+
+  <dialog id="signup-modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-box">
+      <button type="button" class="close" id="close-modal" aria-label="Close signup popup">&times;</button>
+
+      <div id="signup-view">
+        <p class="eyebrow">Free newsletter</p>
+        <h2 id="modal-title">Get one web dev tip every week</h2>
+        <p id="modal-desc">Join the list. No spam, and you can unsubscribe at any time.</p>
+
+        <form id="signup-form" novalidate>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
+                 placeholder="name@example.com" aria-describedby="email-error">
+          <p class="error" id="email-error" role="alert"></p>
+          <button type="submit" class="submit">Subscribe</button>
+        </form>
+        <button type="button" class="link-btn dismiss" id="no-thanks">No thanks</button>
+      </div>
+
+      <div id="success-view" hidden>
+        <p class="success-icon" aria-hidden="true">&#10003;</p>
+        <h2>You are subscribed!</h2>
+        <p id="success-text" role="status"></p>
+        <button type="button" class="submit" id="done">Done</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
